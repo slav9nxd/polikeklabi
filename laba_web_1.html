@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Page</title>
+    <style>
+        /* Основные стили */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Заголовок */
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-top: 20px;
+        }
+
+        /* Контейнер */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #ffffff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* Изображение */
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Список */
+        ol {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+
+        ol li {
+            margin-bottom: 10px;
+        }
+
+        /* Кнопка */
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #3498db;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            text-align: center;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transition: background 0.3s ease;
+        }
+
+        a:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Никита красавчик!</h1>
+    <div class="container">
+        <img src="IMG_0065.JPG" alt="Тут лицо Никиты">
+        <p>Имя Никита имеет древнегреческое происхождение. Оно происходит от слова, что означает "победитель". Корень "νίκη" (nikē) переводится как "победа". Имя стало популярным в христианской традиции благодаря святому Никите, который почитался за свою веру. Со временем оно распространилось по миру.</p>
+        <p>Имя Никита получило широкое распространение в Византии, а затем пришло на Русь вместе с христианством. Оно считалось благозвучным и символизировало силу и успех. Благодаря святым покровителям, таким как великомученик Никита Готский, имя стало популярным среди христианских народов, сохранив свое значение "победитель".</p>
+        <p>В русской культуре имя Никита стало употребляться уже в X-XI веках. Его популярность была связана с почитанием святых Никит, которые символизировали добродетели христианского духа. Имя также часто встречалось среди князей, монахов и простого народа, укрепляя свою позицию как традиционное и значимое.</p>
+        <ol>
+            <li>Никита</li>
+            <li>верни</li>
+            <li>косарь</li>
+        </ol>
+        <a href="#" id="runawayButton">Крутой!</a>
+    </div>
+
+    <script>
+        const button = document.getElementById('runawayButton');
+
+        button.addEventListener('mouseover', () => {
+            // Получаем случайные координаты в пределах окна браузера
+            const x = Math.random() * (window.innerWidth - button.offsetWidth);
+            const y = Math.random() * (window.innerHeight - button.offsetHeight);
+
+            // Устанавливаем новые координаты кнопки
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
+        });
+    </script>
+</body>
+</html>
