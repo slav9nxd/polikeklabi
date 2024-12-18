@@ -3,9 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>First Page</title>
-   
-    <link rel="stylesheet" href="styles.css">
+    
+
+    <!-- Normalize или Reseter -->
+    <link rel="stylesheet" href="/Users/vaceslavpolanin/pythonpolikek/css/normalize.css">
+    
+    <!-- Основной стиль -->
+    <link rel="stylesheet" href="/Users/vaceslavpolanin/pythonpolikek/css/styles.css">
+
+    <!-- Подключение шрифта Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <h1>Никита красавчик!</h1>
@@ -20,22 +27,18 @@
             <li>косарь</li>
         </ol>
         <a href="#" id="runawayButton">Крутой!</a>
-        <a href="https://images.app.goo.gl/pE557u5jQVj7Nd726">Смешная фотка Никиты</a>
-        <a href="https://images.app.goo.gl/pE557u5jQVj7Nd726"> Еще одна cмешная фотка Никиты</a>
     </div>
 
     <script>
-        const button = document.getElementById('runawayButton')
+        const button = document.getElementById('runawayButton');
 
         button.addEventListener('mouseover', () => {
-            // Получаем случайные координаты в пределах окна браузера
             const x = Math.random() * (window.innerWidth - button.offsetWidth);
             const y = Math.random() * (window.innerHeight - button.offsetHeight);
-
-            // Устанавливаем новые координаты кнопки
             button.style.left = `${x}px`;
             button.style.top = `${y}px`;
         });
     </script>
 </body>
 </html>
+
